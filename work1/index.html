@@ -1,14 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>慕课网首页</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
+            margin: 0;
+            padding: 0
+        }
+
+        .mainNav{
+            width: 100%;
+            height: 40px;
+            background: #777777;
+        }
+        .mainNav .wrapper{
+            height: 40px;
+        }
+        .mainNav .wrapper .inner{
+            position: relative;
+            z-index: 56;
+            width: 940px;
+            padding-left: 250px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .mn_sort{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .mn_sort a{
+            color: #FFFFFF;
+        }
+        .mn_sort a:hover{
+            color:#1ab177;
+            text-decoration: underline;
+        }
+        .mn_mt{
+            width: 250px;
+            height: 40px;
+            background-color: #40BB8A;
+        }
+        .mn_mt a{
+            font: 700 16px/40px 'simsun';
+            padding-left: 27px;
+            color: #fff;
+            display: block;
+        }
+        .mn_mc .item{
+            width: 248px;
+            height: 29px;
+            border-bottom: 1px solid #f2f2f2;
+            line-height: 29px;
+            padding-top: 18px;
+        }
+        .mn_mc .item .i_hd {
+            position: absolute;
+            z-index: 1;
+            width: 248px;
+            color: #FFFFFF;
+
+        }
+
+        .mn_mc .item .i_hd_tit {
+            display: block;
+            width: 220px;
+            padding-left: 26px;
+            font-size: 14px;
+        }
+        .mn_mc .item .i_hd_arr{
+            display: block;
+            position: absolute;
+            left:230px;
+            top:9px;
+            width:8px;
+            height:11px;
+            overflow: hidden;
+            background: url(//ckres.baidu.com/sites/www/v2/images/index/i_hd_arr.gif) no-repeat 0 0;
+        }
+        .mainNav .mn_menu li{
+            float:left;
+            position: relative;
+        }
+        .mainNav .mn_menu li a{
+            display: block;
+            padding: 0 20px;
+            margin:0 1px 0 0 ;
+            font:700 14px/40px 'arial';
+            color:#fff;
+        }
+        .mn_mc{
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width:248px;
+            height: 329px;
+            overflow: visible;
+            border:1px solid #1CB177;
+            border-top:none;
+            background: #ffffff;
+        }
+        .mn_mc .item .i_bd {
+            display: none;
+            position: absolute;
+            top: 0px;
+            z-index: 12;
+            left: 248px;
+            width: 830px;
+            height: auto;
+            min-height: 200px;
+            overflow: visible;
+            border: 1px solid #1cb177;
+            background: #fafafa;
+            box-shadow: 1px 1px 2px #ddd;
+        }
+
+        .mn_mc .item_hover {
+            height: 28px;
+            line-height: 28px;
+            border-left: 3px solid #1cb177;
+            border-top: 1px solid #1cb177;
+            border-bottom: 1px solid #1cb177;
+            box-shadow: 0px 1px 1px #ddd;
+        }
+
+        .mn_mc .item_hover .i_hd {
+            z-index: 13;
+        }
+
+        .mn_mc .item_hover .i_hd_tit {
+            width: 223px;
+            padding-left: 23px;
+            z-index: 16;
+            background: #fff;
+        }
+
+        .mn_mc .item_hover .i_hd_arr {
+            display: none;
+        }
+
+        .categ_m {
+            float: left;
+            width: 580px;
+            min-height: 334px;
+            padding: 0px 15px;
+            background: #fff;
+        }
+
+      
+        .categ_s {
+            float: right;
+            width: 220px;
+            height: 334px;
+            background-color: #fafafa;
+        }
+
+        .categ_s a img:hover {
+            opacity: .7;
+            filter: alpha(opacity=70);
+        }
+
+        .mn_sort .categ_s .lstTxt a {
+            color: #555;
+        }
+        .js{
+             position: absolute;
+            top: 40px;
+            left: 0;
+            width:1248px;
+            height: 329px;
+            overflow: visible;
+            border:1px solid #1CB177;
+            border-top:none;
+           
+
+        }
+        .banner{ margin:10px auto; border:5px solid #000; width:550px; height:300px; overflow:hidden; position:relative;}
+.banner .img{ width:5000px; position:absolute; left:0px; top:0;}
+.banner .img li{ float:left;}
+
+.banner .num{ position:absolute; width:100%; bottom:10px; left:0; text-align:center; font-size:0px;}
+.banner .num li{ width:10px;height:10px; background:#888; border-radius:50%; display:inline-block; margin:0 3px; cursor:pointer;}
+.banner .num li.on{ background:#F60;}
+
+.banner .btn{ width:30px; height:50px; background:rgba(0,0,0,0.5); position:absolute; top:50%; margin-top:-25px; cursor:pointer; text-align:center; line-height:50px; color:#fff; font-size:40px; font-family:"宋体"; display:none;}
+.banner:hover .btn{ display:block;}
+
+.banner .btn_l{ left:0;}
+.banner .btn_r{ right:0;}
+.bannner:hover{animation-play-state: paused;}
+    </style>
+
 </head>
 <body>
-  <h1>慕课网首页开发</h1>
-  <p>根据慕课网官网https://www.imooc.com，开发下图中的内容，要求:只需要开发html，css部分，不需要交互效果</p>
-  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g8bp2bog71j321h0u0q73.jpg" alt="">
+    <div class="mainNav mb20 bc">
+        <div class="wrapper">
+            <div class="inner">
+                <div class="mn_sort">
+                    <div class="mn_mc" style="display:block; background: #494949">
+                        <div class="item">
+                            <div class="i_hd">
+                                <span class="i_hd_tit">
+                                    <a href="#" >前沿 /</a>
+                                    <a href="#" >区块链 /</a>
+                                    <a href="#" >人工智能 </a>
+                                </span>
+                                <s class="i_hd_arr"></s>
+                            </div>
+
+                            <div class="i_bd" style="display: none;">
+                                <!-- =S categ_m -->
+                                <div class="categ_m">
+                                   
+                                </div>
+                                <!-- =E categ_m -->
+                                <!-- =S categ_s -->
+                                <div class="categ_s">
+                                    <div class="lstTxt">
+                                       
+                                    </div>
+                                </div>
+                                <!-- =S categ_s -->
+                            </div><!-- =E i_bd -->
+                        </div>
+                        <!-- =E item -->
+                        <div class="item">
+                            <div class="i_hd">
+                                <span class="i_hd_tit">
+                                   <a href="#" >前端 /</a>
+                                    <a href="#" >小程序 /</a>
+                                    <a href="#" >js </a>
+                                </span>
+                                <s class="i_hd_arr"></s>
+                            </div>
+                        </div>
+                        <!-- =E item -->
+                        <div class="item">
+                            <div class="i_hd">
+                                <span class="i_hd_tit">
+                                   <a href="#" >后端 /</a>
+                                    <a href="#" >java /</a>
+                                    <a href="#" >python </a>
+                                </span>
+                                <s class="i_hd_arr"></s>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="i_hd">
+                                <span class="i_hd_tit">
+                                   <a href="#" >移动 /</a>
+                                    <a href="#" >安卓 /</a>
+                                    <a href="#" >ios </a>
+                                </span>
+                                <s class="i_hd_arr"></s>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="i_hd">
+                                <span class="i_hd_tit">
+                                   <a href="#" >云计算 /</a>
+                                    <a href="#" >大数据 /</a>
+                                    <a href="#" >容器 </a>
+                                </span>
+                                <s class="i_hd_arr"></s>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="i_hd">
+                                <span class="i_hd_tit">
+                                   <a href="#" >运维 /</a>
+                                    <a href="#" >测试 /</a>
+                                    <a href="#" >数据库 </a>
+                                </span>
+                                <s class="i_hd_arr"></s>
+                            </div>
+                        </div>
+                        <div class="item item_last">
+                            <div class="i_hd">
+                                <span class="i_hd_tit">
+                                    <a href="#" >ui设计 /</a>
+                                    <a href="#" >3d动画 /</a>
+                                    <a href="#" >游戏 </a>
+                                </span>
+                                <s class="i_hd_arr"></s>
+                            </div>
+                           
+
+                       
+
+                        </div>
+                    </div>
+                    <div class="js">
+                     <div class="banner" id="banner">
+    <ul class="img">
+        <li><a href="#"><img src="1.jpg"></a></li>
+        <li><a href="#"><img src="2.jpg"></a></li>
+        <li><a href="#"><img src="3.jpg"></a></li>
+        <li><a href="#"><img src="4.jpg"></a></li>
+    </ul>
+      <ul class="num"> 
+      <li class="on"></li> 
+      <li></li> 
+      <li></li> 
+      <li></li>     
+    </ul>
+    
+    <div class="btn btn_l">&lt;</div>
+    <div class="btn btn_r">&gt;</div>
+    <div class="thing">
+
+
+        </div>
+
+</div>           </div>
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
