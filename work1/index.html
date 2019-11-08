@@ -113,9 +113,60 @@
             min-height: 200px;
             overflow: visible;
             border: 1px solid #1cb177;
-            background: #fafafa;
+            background: #ffffff;
             box-shadow: 1px 1px 2px #ddd;
         }
+
+         .mn_mc .item .i_bd1 {
+            display: none;
+            position: absolute;
+            top: 0px;
+            z-index: 12;
+            left: 248px;
+            width: 830px;
+            height: auto;
+            min-height: 200px;
+            overflow: visible;
+            border: 1px solid #1cb177;
+            background: #EF2424;
+            box-shadow: 1px 1px 2px #ddd;
+        }
+
+
+
+         .mn_mc .item .i_bd2 {
+            display: none;
+            position: absolute;
+            top: 0px;
+            z-index: 12;
+            left: 248px;
+            width: 830px;
+            height: auto;
+            min-height: 200px;
+            overflow: visible;
+            border: 1px solid #1cb177;
+            background: yellow;
+            box-shadow: 1px 1px 2px #ddd;
+        }
+
+
+
+         .mn_mc .item .i_bd3 {
+            display: none;
+            position: absolute;
+            top: 0px;
+            z-index: 12;
+            left: 248px;
+            width: 830px;
+            height: auto;
+            min-height: 200px;
+            overflow: visible;
+            border: 1px solid #1cb177;
+            background: green;
+            box-shadow: 1px 1px 2px #ddd;
+        }
+
+
 
         .mn_mc .item_hover {
             height: 28px;
@@ -141,30 +192,7 @@
             display: none;
         }
 
-        .categ_m {
-            float: left;
-            width: 580px;
-            min-height: 334px;
-            padding: 0px 15px;
-            background: #fff;
-        }
-
-      
-        .categ_s {
-            float: right;
-            width: 220px;
-            height: 334px;
-            background-color: #fafafa;
-        }
-
-        .categ_s a img:hover {
-            opacity: .7;
-            filter: alpha(opacity=70);
-        }
-
-        .mn_sort .categ_s .lstTxt a {
-            color: #555;
-        }
+        
         .js{
              position: absolute;
             top: 40px;
@@ -173,8 +201,7 @@
             height: 329px;
             overflow: visible;
             border:1px solid #1CB177;
-            border-top:none;
-           
+            border-top:none;   
 
         }
         .banner{ margin:10px auto; border:5px solid #000; width:550px; height:300px; overflow:hidden; position:relative;}
@@ -203,35 +230,28 @@
                         <div class="item">
                             <div class="i_hd">
                                 <span class="i_hd_tit">
-                                    <a href="#" >前沿 /</a>
-                                    <a href="#" >区块链 /</a>
-                                    <a href="#" >人工智能 </a>
+                                    <a href="#" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" >前沿 /</a>
+                                    <a href="#" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">区块链 /</a>
+                                    <a href="#" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">人工智能 </a>
                                 </span>
                                 <s class="i_hd_arr"></s>
                             </div>
 
-                            <div class="i_bd" style="display: none;">
-                                <!-- =S categ_m -->
-                                <div class="categ_m">
+
+                            <div class="i_bd3"></div>
+                            <div class="i_bd2"></div>
+                            <div class="i_bd1"></div>
+                            <div class="i_bd" >
                                    
-                                </div>
-                                <!-- =E categ_m -->
-                                <!-- =S categ_s -->
-                                <div class="categ_s">
-                                    <div class="lstTxt">
-                                       
-                                    </div>
-                                </div>
-                                <!-- =S categ_s -->
                             </div><!-- =E i_bd -->
                         </div>
                         <!-- =E item -->
                         <div class="item">
                             <div class="i_hd">
                                 <span class="i_hd_tit">
-                                   <a href="#" >前端 /</a>
-                                    <a href="#" >小程序 /</a>
-                                    <a href="#" >js </a>
+                                   <a href="#"onmouseover="mouseOver1(this)" onmouseout="mouseOut1(this)" >前端 /</a>
+                                    <a href="#"onmouseover="mouseOver1(this)" onmouseout="mouseOut1(this)" >小程序 /</a>
+                                    <a href="#"onmouseover="mouseOver1(this)" onmouseout="mouseOut1(this)" >js </a>
                                 </span>
                                 <s class="i_hd_arr"></s>
                             </div>
@@ -240,9 +260,9 @@
                         <div class="item">
                             <div class="i_hd">
                                 <span class="i_hd_tit">
-                                   <a href="#" >后端 /</a>
-                                    <a href="#" >java /</a>
-                                    <a href="#" >python </a>
+                                   <a href="#" onmouseover="mouseOver2(this)" onmouseout="mouseOut2(this)">后端 /</a>
+                                    <a href="#" onmouseover="mouseOver2(this)" onmouseout="mouseOut2(this)">java /</a>
+                                    <a href="#" onmouseover="mouseOver2(this)" onmouseout="mouseOut2(this)">python </a>
                                 </span>
                                 <s class="i_hd_arr"></s>
                             </div>
@@ -251,9 +271,9 @@
                         <div class="item">
                             <div class="i_hd">
                                 <span class="i_hd_tit">
-                                   <a href="#" >移动 /</a>
-                                    <a href="#" >安卓 /</a>
-                                    <a href="#" >ios </a>
+                                   <a href="#" onmouseover="mouseOver3(this)" onmouseout="mouseOut3(this)">移动 /</a>
+                                    <a href="#"onmouseover="mouseOver3(this)" onmouseout="mouseOut3(this)" >安卓 /</a>
+                                    <a href="#" onmouseover="mouseOver3(this)" onmouseout="mouseOut3(this)">ios </a>
                                 </span>
                                 <s class="i_hd_arr"></s>
                             </div>
@@ -261,9 +281,9 @@
                         <div class="item">
                             <div class="i_hd">
                                 <span class="i_hd_tit">
-                                   <a href="#" >云计算 /</a>
-                                    <a href="#" >大数据 /</a>
-                                    <a href="#" >容器 </a>
+                                   <a href="#" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">云计算 /</a>
+                                    <a href="#" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">大数据 /</a>
+                                    <a href="#" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">容器 </a>
                                 </span>
                                 <s class="i_hd_arr"></s>
                             </div>
@@ -271,9 +291,9 @@
                         <div class="item">
                             <div class="i_hd">
                                 <span class="i_hd_tit">
-                                   <a href="#" >运维 /</a>
-                                    <a href="#" >测试 /</a>
-                                    <a href="#" >数据库 </a>
+                                   <a href="#" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">运维 /</a>
+                                    <a href="#"onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" >测试 /</a>
+                                    <a href="#" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">数据库 </a>
                                 </span>
                                 <s class="i_hd_arr"></s>
                             </div>
@@ -281,9 +301,9 @@
                         <div class="item item_last">
                             <div class="i_hd">
                                 <span class="i_hd_tit">
-                                    <a href="#" >ui设计 /</a>
-                                    <a href="#" >3d动画 /</a>
-                                    <a href="#" >游戏 </a>
+                                    <a href="#" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">ui设计 /</a>
+                                    <a href="#" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">3d动画 /</a>
+                                    <a href="#" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">游戏 </a>
                                 </span>
                                 <s class="i_hd_arr"></s>
                             </div>
@@ -323,5 +343,54 @@
         </div>
     </div>
 </body>
+<script >
+     function mouseOver(obj){
+        var menu =document.getElementsByClassName("i_bd");  //寻找该事件子节点（商品子类别）
+        menu[0].style.display='block';                      //设置子节点显示
+    }
+
+    //鼠标移出到元素上方时
+    function mouseOut(obj){
+        var menu =document.getElementsByClassName("i_bd");  //寻找该事件子节点（商品子类别）
+        menu[0].style.display='none';                       //设置子节点隐藏
+    }
+
+
+
+     function mouseOver1(obj){
+        var menu =document.getElementsByClassName("i_bd1");  //寻找该事件子节点（商品子类别）
+        menu[0].style.display='block';                      //设置子节点显示
+    }
+
+    //鼠标移出到元素上方时
+    function mouseOut1(obj){
+        var menu =document.getElementsByClassName("i_bd1");  //寻找该事件子节点（商品子类别）
+        menu[0].style.display='none';                       //设置子节点隐藏
+    }
+
+     function mouseOver2(obj){
+        var menu =document.getElementsByClassName("i_bd2");  //寻找该事件子节点（商品子类别）
+        menu[0].style.display='block';                      //设置子节点显示
+    }
+
+    //鼠标移出到元素上方时
+    function mouseOut2(obj){
+        var menu =document.getElementsByClassName("i_bd2");  //寻找该事件子节点（商品子类别）
+        menu[0].style.display='none';                       //设置子节点隐藏
+    }
+
+     function mouseOver3(obj){
+        var menu =document.getElementsByClassName("i_bd3");  //寻找该事件子节点（商品子类别）
+        menu[0].style.display='block';                      //设置子节点显示
+    }
+
+    //鼠标移出到元素上方时
+    function mouseOut3(obj){
+        var menu =document.getElementsByClassName("i_bd3");  //寻找该事件子节点（商品子类别）
+        menu[0].style.display='none';                       //设置子节点隐藏
+    }
+
+
+</script>
 
 </html>
